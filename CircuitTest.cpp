@@ -1,17 +1,26 @@
-// CircuitTest.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/* 
+Lydia Pierce
+CSCI 182
+CircuitTest.cpp : Create a class "Circuit" with 2 int arrays. The arrays are filled and destroyed.
+*/
 
 #include <iostream>
 #include "Circuit.h"
-
-
+#include "ParallelCircuit.h"
+#include "SeriesCircuit.h"
+using namespace std;
 
 
 int main()
 {
+	// Create instance on the heap
+        Circuit* pHeap = new ParallelCircuit(12.5);
+		delete pHeap;
 
-        Circuit pHeap = Circuit();
-        //delete pHeap;
+	   // Create part on the heap
+	   //EnginePart* pHeapPart = new EnginePart(39, 6, "Gear Shift", 500);
+	   //pHeapPart->PrintPart();
+	   //delete pHeapPart;
 
         return 0;
 }
