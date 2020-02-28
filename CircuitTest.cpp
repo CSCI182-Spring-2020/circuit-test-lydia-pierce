@@ -17,10 +17,14 @@ int main()
         Circuit* pHeap = new ParallelCircuit(12.5);
 		delete pHeap;
 
-	   // Create part on the heap
-	   //EnginePart* pHeapPart = new EnginePart(39, 6, "Gear Shift", 500);
-	   //pHeapPart->PrintPart();
-	   //delete pHeapPart;
+		Circuit* mHeap = new SeriesCircuit(11.2);
+		delete mHeap;
+
+		// Create instance on the heap
+		Circuit* r1 = new Circuit(12.2);
+		Circuit* r2 = new Circuit(10.4);
+		delete r1;
+		delete r2;
 
         return 0;
 }

@@ -10,7 +10,7 @@ public:
 	int* cat;
 	int* dog;
 
-	// Circuit();
+	Circuit() {};
 	Circuit(float resistance)
 	{
 		_resistance = resistance;
@@ -27,6 +27,16 @@ public:
 		
 	};
 
+	// Copy constructor
+	Circuit(const Circuit& oldCircuit) 
+	{
+		cat = new int;
+		*cat = *oldCircuit.cat; // copy the value
+		dog = new int;
+		*dog = *oldCircuit.dog;
+	};
+
+
 	virtual ~Circuit()
 	{
 		//	Deallocate the memory that was previously reserved for these arrays.
@@ -34,5 +44,6 @@ public:
 		delete[] dog;
 		//	cout << cat; // Should produce an error
 	};
+	
 };
 

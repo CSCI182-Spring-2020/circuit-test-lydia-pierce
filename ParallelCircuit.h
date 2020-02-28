@@ -12,6 +12,10 @@ public:
 	{
 		_ParallelResistance = resistance;
 	}
+
+	// Copy constructor
+	ParallelCircuit(const ParallelCircuit&) {};
+
 	~ParallelCircuit() {};
 };
 
